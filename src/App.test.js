@@ -29,10 +29,3 @@ test('renders Message', () => {
   const message = getByText(/message/i);
   expect(message).toBeInTheDocument();
 });
-
-test('Changing input values', () => {
-  const { getByText } = render(<App />);
-  const firstNameInput = getByText(/first name*/i);
-  fireEvent.change(firstNameInput, { target: { value: 'Tiffany' } });
-  expect(firstNameInput.value).toBe('Tiffany');
-});
