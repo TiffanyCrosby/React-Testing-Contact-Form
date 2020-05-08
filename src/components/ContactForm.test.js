@@ -12,17 +12,17 @@ test('contact form will submit', () => {
   const lastNameInput = getByLabelText(/Last Name/i);
   const emailInput = getByLabelText(/Email/i);
   fireEvent.change(firstNameInput, {
-    target: { name: 'firstName', value: 'Tiffany' },
+    target: { value: 'Tiffany' },
   });
   expect(firstNameInput.value).toBe('Tiffany');
 
   fireEvent.change(lastNameInput, {
-    target: { name: 'lastName', value: 'Crosby' },
+    target: { value: 'Crosby' },
   });
   expect(lastNameInput.value).toBe('Crosby');
 
   fireEvent.change(emailInput, {
-    target: { name: 'email', value: 'tiffanycrosby@nothing.com' },
+    target: { value: 'tiffanycrosby@nothing.com' },
   });
   expect(emailInput.value).toBe('tiffanycrosby@nothing.com');
 
